@@ -1,0 +1,100 @@
+.navbar-brand .logo-img {
+    height: 60px; /* Tamaño del logo */
+    margin-right: 20px;
+    vertical-align: middle; /* Alineación vertical con el texto */
+}
+
+html {
+    scroll-behavior: auto; 
+}
+
+section {
+    min-height: 100vh; 
+    padding-top: 56px; 
+    display: flex;
+    align-items: center;
+}
+.section-content {
+    width: 100%;
+}
+.hero-section {
+    min-height: 100vh;
+    padding-top: 0; 
+}
+
+/* Estilo para el Navbar Fijo */
+.navbar-custom {
+    background-color: #212529;
+}
+.navbar-custom .nav-link, .navbar-custom .navbar-brand {
+    color: #ffffff !important;
+}
+.navbar-custom .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Estilo para el Hero/Inicio */
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center; 
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: #000;
+}
+
+/* Estilo de Tarjetas de Producto */
+.product-card {
+    border: 1px solid #dee2e6;
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffffff;
+    height: 100%; 
+}
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo Específico de la Sección Productos */
+.nav-pills-custom .nav-link {
+    border-radius: 0;
+    margin-bottom: 5px;
+    color: #212529;
+    font-weight: 500;
+    text-align: left;
+}
+.nav-pills-custom .nav-link.active {
+    background-color: #ffc107; 
+    color: #212529; 
+    border-left: 5px solid #212529; 
+}
+
+.products-container {
+    min-height: 80vh; 
+}
+
+/* Estilo para las nuevas imágenes de contacto */
+.contact-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados para estética */
+}
+
+/* Estilo para el botón de WhatsApp Flotante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+
+}
+.whatsapp-float img {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%; 
+}
