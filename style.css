@@ -98,3 +98,50 @@ section {
     height: 100%;
     border-radius: 50%; 
 }
+
+
+/* Estilo para hacer que las imágenes de producto sean clickeables */
+.product-image {
+    cursor: zoom-in; /* Cambia el cursor para indicar interactividad */
+}
+
+/* Estilo para la imagen ampliada dentro del modal */
+#modalImage {
+    max-height: 90vh; /* Limita la altura de la imagen al 90% del viewport */
+    width: auto; /* Asegura que el ancho se ajuste proporcionalmente */
+    max-width: 100%; /* No excede el ancho del modal */
+    background-color: white; /* Fondo blanco para imágenes transparentes/recortadas */
+    padding: 5px; 
+}
+
+/* Ajuste del botón de cerrar del modal para que sea visible sobre el fondo oscuro */
+.modal-header .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); /* Hace el ícono blanco */
+    opacity: 0.8;
+}
+
+/* Estilo para hacer que las imágenes de producto sean clickeables */
+.product-image {
+    cursor: zoom-in; /* Cambia el cursor para indicar interactividad */
+}
+
+/* Estilo para la imagen ampliada dentro del modal */
+#modalImage {
+    max-height: 90vh; /* Limita la altura de la imagen al 90% del viewport */
+    width: auto; /* Asegura que el ancho se ajuste proporcionalmente */
+    max-width: 100%; /* No excede el ancho del modal */
+    background-color: #333; /* Fondo oscuro para resaltar la imagen */
+    padding: 5px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste del botón de cerrar del modal para que sea visible sobre el fondo oscuro */
+.modal-header .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); /* Hace el ícono blanco */
+    opacity: 0.9;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1051; /* Asegura que esté sobre la imagen */
+}
