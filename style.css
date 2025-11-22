@@ -10,7 +10,7 @@ html {
 
 section {
     min-height: 100vh; 
-    padding-top: 56px; 
+    padding-top: 90px; 
     display: flex;
     align-items: center;
 }
@@ -145,3 +145,4 @@ section {
     right: 15px;
     z-index: 1051; /* Asegura que esté sobre la imagen */
 }
+
