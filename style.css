@@ -1,25 +1,62 @@
 .navbar-brand .logo-img {
-    height: 60px; /* Tamaño del logo */
+    height: 60px;
     margin-right: 20px;
-    vertical-align: middle; /* Alineación vertical con el texto */
+    vertical-align: middle;
 }
 
 html {
-    scroll-behavior: auto; 
+    scroll-behavior: auto;
 }
 
 section {
-    min-height: 100vh; 
-    padding-top: 90px; 
+    min-height: 100vh;
+    padding-top: 90px;
     display: flex;
     align-items: center;
 }
 .section-content {
     width: 100%;
 }
+
+/* =============================================
+   HERO SECTION CON VIDEO DE FONDO
+   ============================================= */
 .hero-section {
+    position: relative;
     min-height: 100vh;
-    padding-top: 0; 
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: #000; /* Fallback si el video no carga */
+}
+
+/* El video ocupa todo el fondo */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Capa oscura semitransparente sobre el video */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor para más/menos oscuridad */
+    z-index: 1;
 }
 
 /* Estilo para el Navbar Fijo */
@@ -33,21 +70,12 @@ section {
     color: #ffc107 !important;
 }
 
-/* Estilo para el Hero/Inicio */
-.hero-section {
-    background: url('hero-bg.jpg') no-repeat center center; 
-    background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    background-color: #000;
-}
-
 /* Estilo de Tarjetas de Producto */
 .product-card {
     border: 1px solid #dee2e6;
     transition: transform 0.3s ease-in-out;
     background-color: #ffffff;
-    height: 100%; 
+    height: 100%;
 }
 .product-card:hover {
     transform: translateY(-3px);
@@ -63,13 +91,13 @@ section {
     text-align: left;
 }
 .nav-pills-custom .nav-link.active {
-    background-color: #ffc107; 
-    color: #212529; 
-    border-left: 5px solid #212529; 
+    background-color: #ffc107;
+    color: #212529;
+    border-left: 5px solid #212529;
 }
 
 .products-container {
-    min-height: 80vh; 
+    min-height: 80vh;
 }
 
 /* Estilo para las nuevas imágenes de contacto */
@@ -77,7 +105,7 @@ section {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
-    border-radius: 8px; /* Bordes redondeados para estética */
+    border-radius: 8px;
 }
 
 /* Estilo para el botón de WhatsApp Flotante */
@@ -91,58 +119,36 @@ section {
     text-align: center;
     box-shadow: 2px 2px 3px #999;
     z-index: 1000;
-
 }
 .whatsapp-float img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    border-radius: 50%; 
-}
-
-
-/* Estilo para hacer que las imágenes de producto sean clickeables */
-.product-image {
-    cursor: zoom-in; /* Cambia el cursor para indicar interactividad */
-}
-
-/* Estilo para la imagen ampliada dentro del modal */
-#modalImage {
-    max-height: 90vh; /* Limita la altura de la imagen al 90% del viewport */
-    width: auto; /* Asegura que el ancho se ajuste proporcionalmente */
-    max-width: 100%; /* No excede el ancho del modal */
-    background-color: white; /* Fondo blanco para imágenes transparentes/recortadas */
-    padding: 5px; 
-}
-
-/* Ajuste del botón de cerrar del modal para que sea visible sobre el fondo oscuro */
-.modal-header .btn-close {
-    filter: invert(1) grayscale(1) brightness(2); /* Hace el ícono blanco */
-    opacity: 0.8;
+    border-radius: 50%;
 }
 
 /* Estilo para hacer que las imágenes de producto sean clickeables */
 .product-image {
-    cursor: zoom-in; /* Cambia el cursor para indicar interactividad */
+    cursor: zoom-in;
 }
 
 /* Estilo para la imagen ampliada dentro del modal */
 #modalImage {
-    max-height: 90vh; /* Limita la altura de la imagen al 90% del viewport */
-    width: auto; /* Asegura que el ancho se ajuste proporcionalmente */
-    max-width: 100%; /* No excede el ancho del modal */
-    background-color: #333; /* Fondo oscuro para resaltar la imagen */
-    padding: 5px; 
+    max-height: 90vh;
+    width: auto;
+    max-width: 100%;
+    background-color: #333;
+    padding: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Ajuste del botón de cerrar del modal para que sea visible sobre el fondo oscuro */
+/* Ajuste del botón de cerrar del modal */
 .modal-header .btn-close {
-    filter: invert(1) grayscale(1) brightness(2); /* Hace el ícono blanco */
+    filter: invert(1) grayscale(1) brightness(2);
     opacity: 0.9;
     font-size: 1.5rem;
     position: absolute;
     top: 15px;
     right: 15px;
-    z-index: 1051; /* Asegura que esté sobre la imagen */
+    z-index: 1051;
 }
 
